@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="class_name">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae, repellat neque magnam velit, ratione explicabo nemo. Vitae porro incidunt magnam minus aliquam. Velit ex voluptate repudiandae sint nobis illum.
+    </div>
+    <div class="class_name" id="element_id">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae, repellat neque magnam velit, ratione explicabo nemo. Vitae porro incidunt magnam minus aliquam. Velit ex voluptate repudiandae sint nobis illum.
+    </div>
+    <div class="class_name">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae, repellat neque magnam velit, ratione explicabo nemo. Vitae porro incidunt magnam minus aliquam. Velit ex voluptate repudiandae sint nobis illum.
+    </div>
+    <div class="class_name">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae, repellat neque magnam velit, ratione explicabo nemo. Vitae porro incidunt magnam minus aliquam. Velit ex voluptate repudiandae sint nobis illum.
+    </div>
+    <div class="class_name">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae, repellat neque magnam velit, ratione explicabo nemo. Vitae porro incidunt magnam minus aliquam. Velit ex voluptate repudiandae sint nobis illum.
+    </div>
+    <div class="class_name">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae, repellat neque magnam velit, ratione explicabo nemo. Vitae porro incidunt magnam minus aliquam. Velit ex voluptate repudiandae sint nobis illum.
+    </div>
+    <div class="class_name">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae, repellat neque magnam velit, ratione explicabo nemo. Vitae porro incidunt magnam minus aliquam. Velit ex voluptate repudiandae sint nobis illum.
+    </div>
+</body>
+<style>
+    .my_reactive_class{
+        background-color: antiquewhite;
+    }
+    .my_reactive_class1{
+       color: red;
+    }
+</style>
+
+
+<script>
+
+
+
+    // var admin = confirm('Is you admin?');
+    // console.log(admin);
+    // if (admin == true) {
+    //     console.log('User is admin');
+    //     var name = prompt('What is tour name');
+    //     alert('Admin name is: ' + name)
+    // }else {
+    //     alert('Go out of here!!!!')
+    // }
+
+
+    var element = document.getElementById("element_id");//отримуємо елемент по його ідентифікатору
+
+       console.log(element); //показуємо в консолі знайдений елемент
+   element.classList.add("my_reactive_class",'my_reactive_class1'); // добавляємо до елементу клас
+//
+   element.style.border = "1px solid red"; //звертаємось до стилів елементу
+   element.style.cssText = "color: blue;font-family: fantasy;font-size: 15px;"; //Добавляємо скриптом список стилів.
+   element.setAttribute("style", "color:red; border: 1px solid blue;");//добавляємо список значень до атрибутів
+   // element.style.display = "none"; //ховаємо елемент
+   element.innerHTML = "Hello world"; //міняємо контент який розміщений всередині тегу
+   // element.innerHTML = '<a href="https://www.google.com.ua/">Google</a>'; //міняємо контент який розміщений всередині тегу на інші теги
+   element.textContent = 'Це всьоголиш текст, теги тут не обробляються.<a href="https://www.google.com.ua/">Google</a>' //вставляємо текст
+   
+    
+    
+    
+   // Робота з циклами
+   // var i = 0;
+   // while(i < 10){
+   //     console.log('Your iterator= '+i);
+   //     i++;
+   // }
+    
+   // var i = 0;
+   // do{
+   //     console.log('Your iterator= ' + i);
+   //     i++;
+   // }while(i > 10)
+    
+   //
+   // var elements = document.getElementsByClassName('class_name'); //отримуємо масив елементів які відповідають умові
+   //
+   //  console.log(elements);
+   //
+   //
+   // console.log(elements.length); //отримуємо кількість елементів в масиві
+   // for(let i = 0;i < elements.length;i++){ //перебираємо елементи по 1 формуючи цикл
+   //     elements[i].classList.add('my_reactive_class')
+   // }
+   //
+    
+   // var x =  prompt('15+10 = ??');
+   //
+   // switch(x){
+   //     case '18':
+   //     case '19':
+   //     case '20':
+   //     case '21':
+   //     case '22':
+   //     case '23':
+   //     case '24': alert('Тепло');  break;
+   //     case '25': alert('В точку');  break;
+   //     case '26':
+   //     case '27':
+   //     case '28':
+   //     case '29':
+   //     case '30': alert('Холоднішає');  break;
+   //     default: alert('Зовсім холодно');break;
+   // }
+   //
+    
+   function askNumber(){
+
+       var my_string =  prompt('Впишіть число він 1 до 5');
+
+       switch(my_string){
+           case '1': alert(1); break;
+           case '2': alert(2); break;
+           case '3': alert(3); break;
+           case '4': alert(4); break;
+           case '5': alert(5); break;
+           default: alert('Я просив від 1 до 5');
+       }
+
+       var ask =  confirm('Повторимо?');
+       if (ask){
+           askNumber();
+       }
+   }
+
+   askNumber();
+    
+    
+    
+    
+</script>
+</html>
